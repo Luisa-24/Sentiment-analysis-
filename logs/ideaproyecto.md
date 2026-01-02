@@ -32,15 +32,15 @@ Se propone inicialmente la siguiente estructura de lo que se desea para el proye
 | Procesamiento de texto | spaCy | Detectar preguntas vs. respuestas |
 | Análisis de emociones | GoEmotions| Clasificar 28 emociones diferentes |
 
-# Librerías usadas hasta el momento y para qué sirven
+# Librerías usadas y para qué sirven
 
-# Soundfile:
+## Soundfile:
 Librería apra manejo de archivosde audio.
 
 - Soporta formatos como WAV, FLAC, OGG, AIFF
 - Permite guardar audio en distintos formatos cpn control de parámetros
 
-# Pydub:
+## Pydub:
 Librería para manipulación  de audio, es decir, cortar, 
 unir, convertir formatos, cambiar volumen, etc.
 
