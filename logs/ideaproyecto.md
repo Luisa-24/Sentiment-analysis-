@@ -110,7 +110,76 @@ Este módulo contiene dos métodos:
  como su nombre lo dice, me detecta la duración del audio
 
  ## validate_audio_file :
- Me valida que el audio nos es servible, legible y compatible 
+ Me valida que el audio nos es servible, legible y compatible
+
+
+# Carpeta ingestion 
+
+## Loader
+El propósito de esta carpeta es hacer ciertas validaciones haciendose las siguientes
+preguntas.
+
+1. ¿ existe el archivo?
+2. ¿ Es un formato soportado? (que no vaya ser pdf, .txt, etc.)
+3. ¿ El adio es válido o corrupto?
+
+
+# Carpeta Schemas 
+
+Esta carpeta tiene varias clases que se encargan de lo siguiente:
+
+### Clase Sentiment:
+
+el proposito de esta clase es representar el resultado del análisis de emociones 
+para un segmento de texto.
+
+#### label: etiqueta de emoción
+#### score: valor asociado entre 0.0 y 1.0
+
+### Clase Segment
+
+El propósito de esta clase es guardar el quien, cuando, que dijo,  rol y emoción. 
+Tiene los siguientes atributos:
+
+#### segment_ id: identificador único local dentro de la entrevista 
+#### speaker: identificador del hablante
+#### start: tiempo de inicio en srgundos
+#### end: tiempo de fin en segundos
+#### text: transcripción asociaa a ese intervalo
+#### role: si es una pregunta o una respuesta
+#### paired_repose_id : id del segmento que responde a esa pregunta
+#### Sentiment: resultado del análisis de emoción
+
+### Clase transcriptSegment 
+
+el proposito de esta clase es representar la salida del transcriptor.
+contiene los siguientes atributos 
+
+#### start: inicio en segundos 
+#### end : fin en segundos 
+#### text : texto transcrito
+#### información por plabra, en que segundo empieza y en cual termina 
+
+
+### Clase interview
+
+#### interviwe_id : id de la entrevista ( nombre base del archivo)
+#### source_path: ruta de audio original 
+#### processed_path: ruta a arcivo procesado 
+#### metadata: dict_metadatos ( duracióm, sample_rate, size, decha, etc.)
+
+También se crea el módulo diarización, convert y loader siguiendo la propuesra estructural dada.
+No he añadido carpetas diferentes ni módulos diferentes, todo lo he hecho en base a la propuesta
+siguiendo y respetando la ruta. 
+
+
+
+A
+
+
+
+
+
 
 
 

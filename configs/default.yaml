@@ -1,0 +1,30 @@
+pipeline:
+  device: "cuda"
+  language: "en"
+
+audio:
+  sample_rate: 16000
+  channels: 1
+  format: "wav"
+  max_duration_s: 7200
+
+diarization:
+  model: "pyannote/speaker-diarization-3.1"
+  min_speakers: 2
+  max_speakers: 3
+
+transcription:
+  model: "large-v3"
+  word_timestamps: true
+
+sentiment:
+  model: "SamLowe/roberta-base-go_emotions"
+  threshold: 0.3
+  analyze_interviewer: false
+
+paths:
+  raw: "data/raw"
+  processed: "data/processed"
+  transcripts: "data/transcripts"
+  outputs: "outputs"
+  logs: "logs"

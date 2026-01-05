@@ -1,8 +1,17 @@
-from pathlib import Path
+""" El propósito de este módulo es
+obtener información sobre audios y  validar archivos de audio.
+
+Args : Ruta al archivo de audio
+Returns: Duración del audio en segundos 
+         y validación del archivo de audio"""
+
+# Estándar
+from pathlib import Path  
 
 import soundfile as sf 
-from pydub import AudioSegment 
 
+from pydub import AudioSegment 
+ 
 """Módulo de funciones para procesamiento de audio.
 
 Args: Ruta al archivo de audio

@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+src/audio_processing/__pycache__/__init__.cpython-313.pyc
+src/audio_processing/__pycache__/convert.cpython-313.pyc
+
+
+# Virtual environments
+venv/
+
+
+
+# Environment
+.env
+.env.local
+
+# Project specific
+data/raw/*
+data/processed/*
+data/transcripts/*
+models/*
+logs/*
+outputs/*
+!data/raw/
+!data/processed/
+!data/transcripts/
+!models/
+!logs/
+!outputs/
+
+
+# Testing
+.pytest_cache/
+
+
+

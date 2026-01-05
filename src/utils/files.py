@@ -1,4 +1,6 @@
+# Estándar 
 from pathlib import Path
+
 
 """Módulo de funciones para manejo de archivos y directorios.
 Crea el directorio si no existe y devuelve la ruta.

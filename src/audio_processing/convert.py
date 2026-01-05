@@ -20,7 +20,7 @@ class AudioConverter:
     def convert(self, input_path: Path, output_dir: Path) -> Path:
         """Método para convertir  archivos de audio.
 
-        Args: 
+        Args:
             Ruta al archivo de audio de entrada.
         Returns:
                Directorio donde se guardará el archivo convertido."""
@@ -45,7 +45,7 @@ class AudioConverter:
         
         Args: Objeto AudioSegment. 
         Returns: AudioSegment normalizado."""
-        
+
         audio = audio.set_channels(self.TARGET_CHANNELS)
         audio = audio.set_frame_rate(self.TARGET_SAMPLE_RATE)
         return audio
